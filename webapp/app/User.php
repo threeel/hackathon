@@ -43,7 +43,7 @@ class User extends Authenticatable {
     }
 
     public function getWorkSpaceFolder() {
-        return config('data_fizz.users_base_folder'). $this->getKey() . '/workspace';
+        return config('data_fizz.users_base_folder')."/". $this->getKey() . '/workspace';
 
     }
 

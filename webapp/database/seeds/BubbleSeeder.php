@@ -22,19 +22,19 @@ class BubbleSeeder extends Seeder {
             'name'     => 'Lefteris Kameris',
             'email'    => 'lefteris.k@3elalliance.com',
             'password' => bcrypt('freedom')
-        ]);
+        ])->createWorkspaceFolder();
 
         User::query()->create([
             'name'     => 'Angelos Prastitis',
             'email'    => 'prastitisangelos@gmail.com',
             'password' => bcrypt('freedom')
-        ]);
+        ])->createWorkspaceFolder();
 
         User::query()->create([
             'name'     => 'Nikolas Pafitis',
             'email'    => 'npafit01@cs.ucy.ac.cy',
             'password' => bcrypt('freedom')
-        ]);
+        ])->createWorkspaceFolder();;
 
         BubbleType::query()->create([
             'name'       => 'Machine Learning',
@@ -56,7 +56,6 @@ class BubbleSeeder extends Seeder {
             'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
             'entrypoint' => '',
         ]);
-
 
     }
 }
