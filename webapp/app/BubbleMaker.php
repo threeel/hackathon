@@ -33,8 +33,10 @@ class BubbleMaker {
         ]);
 
         // Start Execute the Bubble Type Command
-        Terminal::command($command)->execute();
+        $result = Terminal::command($command)->execute();
 
+
+        dd($result);
         // Run Entrypoint
         // Parse Docker Output
         // Get URLs

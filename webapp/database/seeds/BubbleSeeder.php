@@ -40,7 +40,7 @@ class BubbleSeeder extends Seeder {
             'name'       => 'Machine Learning',
             'slug'       => 'machine-learning',
             'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
-            'entrypoint' => '',
+            'entrypoint' => '/opt/conda/bin/jupyter nteract --notebook-dir=/opt/notebooks --ip=\'*\' --port=8889 --no-browser --allow-root',
         ]);
 
         BubbleType::query()->create([
