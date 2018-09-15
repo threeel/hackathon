@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class DataBubble extends Model
 {
-    //
+    protected $guarded = [];
 }

@@ -18,7 +18,7 @@ class CreateBubbleTypesTable extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('command');
-            $table->string('entrypoint');
+            $table->text('entrypoint');
             $table->timestamps();
         });
     }

@@ -17782,3 +17782,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   left: auto;
 }
 
+.card-profile.mt--500 {
+  margin-top: -500px;
+}
+

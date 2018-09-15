@@ -21,20 +21,12 @@ class DataBubbleController extends Controller {
         return $user->bubbles;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create() {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return DataBubble
      */
     public function store(Request $request) {
 
@@ -46,12 +38,14 @@ class DataBubbleController extends Controller {
         ]);
 
         /** @var BubbleType $bubbleType */
-        $bubbleType = BubbleType::query()->firstOrFail(['slug' => $data['bubble_type']]);
+        $bubbleType = BubbleType::query()->where('slug' , $data['bubble_type'])->firstOrFail();
 
         $bubble = new BubbleMaker($bubbleType, $user);
 
-        return $bubble->make();
+        $dataBubble =  $bubble->make();
 
+        /** @var DataBubble $dataBubble */
+        return view('home')->with('dataBubble',$dataBubble);
     }
 
     /**

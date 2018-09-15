@@ -18,5 +18,5 @@ mix.js('resources/js/app.js', 'public/js')
 mix.js('resources/js/argon.js','public/js');
 
 mix.browserSync({
-    proxy:"https://opendata.wip"
+    proxy:"http://opendata.wip"
 });

@@ -86,22 +86,22 @@ class BubbleType extends Model {
         BubbleType::query()->create([
             'name'       => 'Machine Learning',
             'slug'       => 'machine-learning',
-            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 --rm -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
-            'entrypoint' => '/opt/conda/bin/jupyter nteract --notebook-dir=/opt/notebooks --ip=\'*\' --port=8889 --no-browser --allow-root',
+            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888  -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
+            'entrypoint' => "/opt/conda/bin/jupyter nteract --notebook-dir=/opt/notebooks --ip='*' --port=8889 --no-browser --allow-root --NotebookApp.token=freedom  &",
         ]);
 
         BubbleType::query()->create([
             'name'       => 'Natural Language Processing',
             'slug'       => 'natural-language-processing',
-            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 --rm -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
-            'entrypoint' => '',
+            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888  -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
+            'entrypoint' => "/opt/conda/bin/jupyter nteract --notebook-dir=/opt/notebooks --ip='*' --port=8889 --no-browser --allow-root --NotebookApp.token=freedom &",
         ]);
 
         BubbleType::query()->create([
             'name'       => 'Data Mining',
             'slug'       => 'data-mining',
-            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 --rm -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
-            'entrypoint' => '',
+            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888  -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
+            'entrypoint' => "/opt/conda/bin/jupyter nteract --notebook-dir=/opt/notebooks --ip='*' --port=8889 --no-browser --allow-root --NotebookApp.token=freedom &",
         ]);
 
     }

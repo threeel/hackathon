@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('workspace','DataBubbleController@index');
+Route::post('workspace','DataBubbleController@store')->name('workspace.create');
+Route::post('workspace/files','DataBubbleFilesController@post')->name('workspace.files');
 
 
 Route::get('login/github', 'Auth\LoginController@redirectToProvider');
