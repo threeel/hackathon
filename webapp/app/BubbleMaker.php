@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Terminal;
 
 class BubbleMaker {
 
@@ -28,24 +27,20 @@ class BubbleMaker {
 
         $command = $this->type->getCommand(['jupyter_port' => $this->getAvailablePort(),
                                             'nteract_port' => $this->getAvailablePort(),
-                                            'name'         => $this->user->getContainerName(),
+                                            'name'         => $this->user->getContainerName($this->type->slug),
                                             'workspace'    => $this->user->getWorkSpaceFolder()
         ]);
 
         // Start Execute the Bubble Type Command
-        $result = Terminal::command($command)->execute();
+        $create_result = Terminal::command($command)->execute();
+//        cb67f20964cca9fc5d45b2764f5812620cef121cacfb382e6b7ab57cfc3ce542
 
-
-        dd($result);
+        dd($create_result->getBody()->getContents());
         // Run Entrypoint
         // Parse Docker Output
         // Get URLs
     }
 
-    public function extractVariables() {
-
-
-    }
 
     /**
      *
@@ -53,6 +48,6 @@ class BubbleMaker {
      */
     public function getAvailablePort() {
 
-        return rand(8090, 9000);
+        return rand(8090, 10000);
     }
 }

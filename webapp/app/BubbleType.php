@@ -15,8 +15,8 @@ class BubbleType extends Model {
     //            'command'    => 'docker run --restart unless-stopped -p **JUPYTER_PORT**:8888 -p **NTERACT_PORT**:8889 -v **WORKSPACE**:/opt/notebooks -d  --name **NAME** threeel/jupyter',
 
     protected $defaults = [
-        'jupyter_port' => 8090,
-        'nteract_port' => 8091
+//        'jupyter_port' => 8090,
+//        'nteract_port' => 8091
     ];
 
     /**
