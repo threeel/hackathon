@@ -18,5 +18,7 @@ class BubbleSeeder extends Seeder
         DataBubble::query()->truncate();
         BubbleType::query()->truncate();
 
+
+
     }
 }

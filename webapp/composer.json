@@ -9,7 +9,11 @@
         "docker-php/docker-php": "^2.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "docker-php/docker-php": "^2.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "hashids/hashids": "^3.0",
+        "josh/laravel-terminal": "dev-develop"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
