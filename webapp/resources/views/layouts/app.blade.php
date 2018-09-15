@@ -22,8 +22,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
-    <link href="{{ asset('vendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
-    <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('staticvendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
+    <link href="{{ asset('staticvendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
 {{--<!-- Argon CSS -->--}}
 {{--<link type="text/css" href="{{ asset('  /css/argon.css?v=1.0.1" rel="stylesheet">--}}
 <!-- Styles -->
@@ -40,10 +40,10 @@
 
 </div>
 <!-- Core -->
-<script src="{{ asset('vendor/jquery/jquery.min.js')}}"></script>
-<script src="{{ asset('vendor/popper/popper.min.js')}}"></script>
-<script src="{{ asset('vendor/bootstrap/bootstrap.min.js')}}"></script>
-<script src="{{ asset('vendor/headroom/headroom.min.js')}}"></script>
+<script src="{{ asset('staticvendor/jquery/jquery.min.js')}}"></script>
+<script src="{{ asset('staticvendor/popper/popper.min.js')}}"></script>
+<script src="{{ asset('staticvendor/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{ asset('staticvendor/headroom/headroom.min.js')}}"></script>
 <!-- Argon JS -->
 <script src="{{ asset('js/argon.js?v=1.0.1')}}"></script>
 </body>
