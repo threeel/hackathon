@@ -48,6 +48,12 @@ return [
             'root' => storage_path('app'),
         ],
 
+        'workspaces' => [
+            'driver' => 'local',
+            'root' => storage_path('app/workspaces'),
+            'url' => env('APP_URL').'/workspaces',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

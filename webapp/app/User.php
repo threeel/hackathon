@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable {
 
@@ -31,24 +32,47 @@ class User extends Authenticatable {
     public function bubbles() {
 
         return $this->hasMany(DataBubble::class);
-        'name'       => 'Machine Learning',
-            'slug'       => 'machine-learning',
-            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 --rm -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
-            'entrypoint' => '/opt/conda/bin/jupyter nteract --notebook-dir=/opt/notebooks --ip=\'*\' --port=8889 --no-browser --allow-root',
-        ]);
+    }
 
-        BubbleType::query()->create([
-            'name'       => 'Natural Language Processing',
-            'slug'       => 'natural-language-processing',
-            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 --rm -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
-            'entrypoint' => '',
-        ]);
+    public function createWorkspaceFolder() {
 
-        BubbleType::query()->create([
-            'name'       => 'Data Mining',
-            'slug'       => 'data-mining',
-            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 --rm -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
-            'entrypoint' => '',
+        if (!file_exists($this->getWorkSpaceFolder())) {
+            mkdir($this->getWorkSpaceFolder(), 0777, true);
+        }
+
+    }
+
+    public function getWorkSpaceFolder() {
+
+        return config('data_fizz.users_base_folder') . "/" . $this->getKey() . '/workspace';
+
+    }
+
+    public static function defaults() {
+
+        User::query()->create([
+            'name'     => 'Lefteris Kameris',
+            'email'    => 'lefteris.k@3elalliance.com',
+            'password' => bcrypt('freedom')
+        ])->createWorkspaceFolder();
+
+        User::query()->create([
+            'name'     => 'Angelos Prastitis',
+            'email'    => 'prastitisangelos@gmail.com',
+            'password' => bcrypt('freedom')
+        ])->createWorkspaceFolder();
+
+        User::query()->create([
+            'name'     => 'Nikolas Pafitis',
+            'email'    => 'npafit01@cs.ucy.ac.cy',
+            'password' => bcrypt('freedom')
+        ])->createWorkspaceFolder();
+
+    }
+
+    public function getContainerName($slug = "") {
+
+        return $this->created_at->timestamp . $slug;
     }
 
 }
