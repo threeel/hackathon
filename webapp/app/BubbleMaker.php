@@ -28,7 +28,7 @@ class BubbleMaker {
 
         $command = $this->type->getCommand(['jupyter_port' => $this->getAvailablePort(),
                                             'nteract_port' => $this->getAvailablePort(),
-                                            'name'         => $this->user->id,
+                                            'name'         => $this->user->getContainerName(),
                                             'workspace'    => $this->user->getWorkSpaceFolder()
         ]);
 

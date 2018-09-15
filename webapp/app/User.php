@@ -68,4 +68,9 @@ class User extends Authenticatable {
         ])->createWorkspaceFolder();
 
     }
+
+    public function getContainerName() {
+
+        return $this->created_at->timestamp;
+    }
 }
