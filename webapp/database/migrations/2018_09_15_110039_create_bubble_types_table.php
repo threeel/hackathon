@@ -15,6 +15,9 @@ class CreateBubbleTypesTable extends Migration
     {
         Schema::create('bubble_types', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('command');
+            $table->string('path');
             $table->timestamps();
         });
     }

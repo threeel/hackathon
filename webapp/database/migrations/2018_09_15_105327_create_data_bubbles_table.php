@@ -15,6 +15,8 @@ class CreateDataBubblesTable extends Migration
     {
         Schema::create('data_bubbles', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->integer('bubble_type_id');
             $table->string('container')->unique();
             $table->string('name');
             $table->string('path');
