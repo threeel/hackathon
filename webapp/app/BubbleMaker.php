@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Terminal;
 
 class BubbleMaker {
 
