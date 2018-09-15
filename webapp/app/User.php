@@ -47,4 +47,25 @@ class User extends Authenticatable {
 
     }
 
+    public static function defaults() {
+
+        User::query()->create([
+            'name'     => 'Lefteris Kameris',
+            'email'    => 'lefteris.k@3elalliance.com',
+            'password' => bcrypt('freedom')
+        ])->createWorkspaceFolder();
+
+        User::query()->create([
+            'name'     => 'Angelos Prastitis',
+            'email'    => 'prastitisangelos@gmail.com',
+            'password' => bcrypt('freedom')
+        ])->createWorkspaceFolder();
+
+        User::query()->create([
+            'name'     => 'Nikolas Pafitis',
+            'email'    => 'npafit01@cs.ucy.ac.cy',
+            'password' => bcrypt('freedom')
+        ])->createWorkspaceFolder();
+
+    }
 }

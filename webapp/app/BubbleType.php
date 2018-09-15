@@ -16,9 +16,7 @@ class BubbleType extends Model {
 
     protected $defaults = [
         'jupyter_port' => 8090,
-        'nteract_port' => 8091,
-        'workspace'    => "workspace",
-        'name'         => "fizzy",
+        'nteract_port' => 8091
     ];
 
     /**
@@ -82,5 +80,29 @@ class BubbleType extends Model {
         }
 
         return $command;
+    }
+
+    public static function defaults() {
+        BubbleType::query()->create([
+            'name'       => 'Machine Learning',
+            'slug'       => 'machine-learning',
+            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
+            'entrypoint' => '/opt/conda/bin/jupyter nteract --notebook-dir=/opt/notebooks --ip=\'*\' --port=8889 --no-browser --allow-root',
+        ]);
+
+        BubbleType::query()->create([
+            'name'       => 'Natural Language Processing',
+            'slug'       => 'natural-language-processing',
+            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
+            'entrypoint' => '',
+        ]);
+
+        BubbleType::query()->create([
+            'name'       => 'Data Mining',
+            'slug'       => 'data-mining',
+            'command'    => 'docker run --restart unless-stopped -p ##JUPYTER_PORT##:8888 -p ##NTERACT_PORT##:8889 -v ##WORKSPACE##:/opt/notebooks -d  --name ##NAME## threeel/jupyter',
+            'entrypoint' => '',
+        ]);
+
     }
 }
