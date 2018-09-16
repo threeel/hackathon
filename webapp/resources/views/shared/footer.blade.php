@@ -1,22 +1,22 @@
 <footer class="footer has-cards">
-    <div class="container container-lg">
-        <div class="row">
-            <div class="col-md-6 mb-5 mb-md-0">
-                <div class="card card-lift--hover shadow border-0">
-                    <a href="../examples/landing.html" title="Landing Page">
-                        <img src="{{ asset('img/theme/landing.jpg')}}" class="card-img">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6 mb-5 mb-lg-0">
-                <div class="card card-lift--hover shadow border-0">
-                    <a href="../examples/profile.html" title="Profile Page">
-                        <img src="{{ asset('img/theme/profile.jpg')}}" class="card-img">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{--<div class="container container-lg">--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-md-6 mb-5 mb-md-0">--}}
+                {{--<div class="card card-lift--hover shadow border-0">--}}
+                    {{--<a href="../examples/landing.html" title="Landing Page">--}}
+                        {{--<img src="{{ asset('img/theme/landing.jpg')}}" class="card-img">--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="col-md-6 mb-5 mb-lg-0">--}}
+                {{--<div class="card card-lift--hover shadow border-0">--}}
+                    {{--<a href="../examples/profile.html" title="Profile Page">--}}
+                        {{--<img src="{{ asset('img/theme/profile.jpg')}}" class="card-img">--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <div class="container">
         <div class="row row-grid align-items-center my-md">
             <div class="col-lg-6">
@@ -51,13 +51,13 @@
             <div class="col-md-6">
                 <div class="copyright">
                     &copy; 2018
-                    <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                    <a href="https://www.creative-tim.com" target="_blank">Data-Fizz</a>.
                 </div>
             </div>
             <div class="col-md-6">
                 <ul class="nav nav-footer justify-content-end">
                     <li class="nav-item">
-                        <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                        <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Data-Fizz</a>
                     </li>
                     <li class="nav-item">
                         <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About

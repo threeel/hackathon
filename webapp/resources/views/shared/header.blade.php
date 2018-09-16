@@ -1,9 +1,9 @@
 <header class="header-global">
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
         <div class="container">
-            {{--<a class="navbar-brand mr-lg-5" href="{{ route('landing') }}">--}}
-                {{--<i class="fa fa-flask"></i>&nbsp;Data Fizz--}}
-            {{--</a>--}}
+            <a class="navbar-brand mr-lg-5" href="{{ route('landing') }}">
+                <i class="fa fa-flask"></i>&nbsp;Data Fizz
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
                     aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,31 +41,31 @@
                                     </div>
                                     <div class="media-body ml-3">
                                         <h6 class="heading text-primary mb-md-1">Getting started</h6>
-                                        <p class="description d-none d-md-inline-block mb-0">Learn how to use Argon
-                                            compiling Scss, change brand colors and more.</p>
+                                        <p class="description d-none d-md-inline-block mb-0">Create your own Bubble and
+                                            start developing immediately</p>
                                     </div>
                                 </a>
-                                <a href="https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html"
-                                   class="media d-flex align-items-center">
-                                    <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                                        <i class="ni ni-palette"></i>
-                                    </div>
-                                    <div class="media-body ml-3">
-                                        <h6 class="heading text-primary mb-md-1">Foundation</h6>
-                                        <p class="description d-none d-md-inline-block mb-0">Learn more about
-                                            colors,
-                                            typography, icons and the grid system we used for Argon.</p>
-                                    </div>
-                                </a>
+                                {{--<a href="https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html"--}}
+                                   {{--class="media d-flex align-items-center">--}}
+                                    {{--<div class="icon icon-shape bg-gradient-success rounded-circle text-white">--}}
+                                        {{--<i class="ni ni-palette"></i>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="media-body ml-3">--}}
+                                        {{--<h6 class="heading text-primary mb-md-1">Foundation</h6>--}}
+                                        {{--<p class="description d-none d-md-inline-block mb-0">Learn more about--}}
+                                            {{--colors,--}}
+                                            {{--typography, icons and the grid system we used for Argon.</p>--}}
+                                    {{--</div>--}}
+                                {{--</a>--}}
                                 <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html"
                                    class="media d-flex align-items-center">
                                     <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
                                         <i class="ni ni-ui-04"></i>
                                     </div>
                                     <div class="media-body ml-3">
-                                        <h5 class="heading text-warning mb-md-1">Components</h5>
-                                        <p class="description d-none d-md-inline-block mb-0">Browse our 50 beautiful
-                                            handcrafted components offered in the Free version.</p>
+                                        <h5 class="heading text-warning mb-md-1">Bubbles</h5>
+                                        <p class="description d-none d-md-inline-block mb-0">Browse our collection of
+                                            Bubble Types to learn which bubble suits you most for your needs.</p>
                                     </div>
                                 </a>
                             </div>
@@ -98,23 +98,19 @@
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
+
 
                             {{--<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">--}}
-                                {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
-                                   {{--onclick="event.preventDefault();--}}
-                                                     {{--document.getElementById('logout-form').submit();">--}}
-                                    {{--{{ __('Logout') }}--}}
-                                {{--</a>--}}
+                            {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
+                            {{--onclick="event.preventDefault();--}}
+                            {{--document.getElementById('logout-form').submit();">--}}
+                            {{--{{ __('Logout') }}--}}
+                            {{--</a>--}}
 
-                                {{--<form id="logout-form" action="{{ route('logout') }}" method="POST"--}}
-                                      {{--style="display: none;">--}}
-                                    {{--@csrf--}}
-                                {{--</form>--}}
+                            {{--<form id="logout-form" action="{{ route('logout') }}" method="POST"--}}
+                            {{--style="display: none;">--}}
+                            {{--@csrf--}}
+                            {{--</form>--}}
                             {{--</div>--}}
                         </li>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -139,14 +135,19 @@
                         </a>
                     </li>
                     <li class="nav-item d-none d-lg-block ml-lg-4">
-                        <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank"
-                           class="btn btn-neutral btn-icon">
-                <span class="btn-inner--icon">
-                  <i class="fa fa-cloud-download mr-2"></i>
-                </span>
-
-                            <span class="nav-link-inner--text">Download</span>
+                        <a style="color: white" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
                         </a>
+                        {{--<a href="https://www.creative-tim.com/product/argon-design-system" target="_blank"--}}
+                           {{--class="btn btn-neutral btn-icon">--}}
+                {{--<span class="btn-inner--icon">--}}
+                  {{--<i class="fa fa-cloud-download mr-2"></i>--}}
+                {{--</span>--}}
+
+                            {{--<span class="nav-link-inner--text">Download</span>--}}
+                        {{--</a>--}}
                     </li>
                 </ul>
             </div>

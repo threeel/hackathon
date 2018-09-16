@@ -29,11 +29,14 @@
                             <div class="col-lg-3 order-lg-2">
 
                             </div>
-                            <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
+                            <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center ">
                                 <div class="card-profile-actions py-4 mt-lg-0">
                                     @isset($dataBubble)
-                                        <a href="{{ $dataBubble->jupyter_url }}" target="_blank" class="btn btn-sm btn-info mr-4">Jupyter</a>
-                                        <a href="{{ $dataBubble->nteract_url }}" target="_blank"
+                                        <a href="{{ $dataBubble->jupyter_url }}"
+                                           target="_blank"
+                                           class="btn btn-sm btn-info mr-4">Jupyter</a>
+                                        <a href="{{ $dataBubble->nteract_url }}"
+                                           target="_blank"
                                            class="btn btn-sm btn-default float-right">nteract</a>
                                     @endisset
                                 </div>
@@ -47,7 +50,7 @@
                                                 <option value="{{ $bubbleType->slug }}">{{ $bubbleType->name }}</option>
                                             @endforeach
                                         </select>
-                                        <button class="btn btn-primary">Create Bubble</button>
+                                        <button class="btn btn-primary mt-4">Create Bubble</button>
                                     </form>
                                 </div>
                             </div>
@@ -58,15 +61,15 @@
                                       enctype="multipart/form-data" id="">
                                     @csrf
 
-                                    <label class="btn btn-outline-success" for="upload">
+                                    {{--<label class="btn btn-outline-success" for="upload">--}}
 
                                         <input id="upload" type="file" class="form-control-file" name="workspace_file"/>
-                                        Upload
-                                    </label>
+                                        {{--Upload--}}
+                                    {{--</label>--}}
 
 
                                     <br>
-                                    <button class="btn btn-clipboard">Upload File</button>
+                                    {{--<button class="btn btn-clipboard">Upload File</button>--}}
 
                                 </form>
                             </div>
@@ -76,17 +79,17 @@
                             @endisset
 
                         </div>
-                        <div class="mt-5 py-5 border-top text-center">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-9">
-                                    <p>An artist of considerable range, Ryan — the name taken by Melbourne-raised,
-                                        Brooklyn-based Nick Murphy — writes, performs and records all of his own music,
-                                        giving it a warm, intimate feel with a solid groove structure. An artist of
-                                        considerable range.</p>
-                                    <a href="#">Show more</a>
-                                </div>
-                            </div>
-                        </div>
+                        {{--<div class="mt-5 py-5 border-top text-center">--}}
+                            {{--<div class="row justify-content-center">--}}
+                                {{--<div class="col-lg-9">--}}
+                                    {{--<p>An artist of considerable range, Ryan — the name taken by Melbourne-raised,--}}
+                                        {{--Brooklyn-based Nick Murphy — writes, performs and records all of his own music,--}}
+                                        {{--giving it a warm, intimate feel with a solid groove structure. An artist of--}}
+                                        {{--considerable range.</p>--}}
+                                    {{--<a href="#">Show more</a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
             </div>

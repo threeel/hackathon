@@ -1,0 +1,18 @@
+h1 {
+  margin: 5px ;
+}
+
+.dropZoneColor {
+  border: 3px dotted rgba(0,0,0,0.08);
+  background-color: rgba(0,0,0,0.12)
+}
+
+.dropZoneColorDrag {
+  border: 3px dotted rgba(0,0,0,0.28);
+  background-color: grey
+}
+
+.dropZoneColorDrop {
+  border: 3px dotted rgba(0,0,0,0.08);
+  background-color: rgba(0,0,0,0.12)
+}

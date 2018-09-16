@@ -47412,7 +47412,7 @@ if (false) {
 /* 43 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n@import \"custom/vendor/bootstrap-datepicker.scss\";\n^\n      File to import not found or unreadable: custom/vendor/bootstrap-datepicker.scss.\n      in /home/nikolas/OpenData/hackathon/webapp/resources/sass/argon.scss (line 88, column 1)\n    at runLoaders (/home/nikolas/OpenData/hackathon/webapp/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /home/nikolas/OpenData/hackathon/webapp/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /home/nikolas/OpenData/hackathon/webapp/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/home/nikolas/OpenData/hackathon/webapp/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/home/nikolas/OpenData/hackathon/webapp/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/home/nikolas/OpenData/hackathon/webapp/node_modules/neo-async/async.js:7974:18)\n    at options.error (/home/nikolas/OpenData/hackathon/webapp/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 /******/ ]);
