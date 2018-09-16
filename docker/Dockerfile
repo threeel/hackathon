@@ -13,6 +13,6 @@ RUN apt-get update && apt-get install jq git openssh-server tmux curl bash gnupg
 RUN pip install nteract_on_jupyter
 
 
-CMD /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root --NotebookApp.token=${jtoken}
+CMD /opt/conda/bin/jupyter nteract --notebook-dir=/opt/notebooks --ip='*' --port=8889 --no-browser --allow-root --NotebookApp.token=${jtoken}
 
 
