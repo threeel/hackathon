@@ -24,7 +24,8 @@
                                 <h1 class="display-3  text-white"><i class="fa fa-flask"></i>&nbsp;Data Fizz
                                     <span>One Click Data Science</span>
                                 </h1>
-                                <p class="lead  text-white">Remove the pain from data science Environment Setup. Batteries Included</p>
+                                <p class="lead  text-white">Remove the pain from data science Environment Setup.
+                                    Batteries Included</p>
                                 <div class="btn-wrapper">
                                     <a href="{{ route('login') }}"
                                        class="btn btn-info btn-icon mb-3 mb-sm-0">
@@ -72,7 +73,11 @@
                                             <span class="badge badge-pill badge-primary">nltk</span>
                                             <span class="badge badge-pill badge-primary">scikit learn</span>
                                         </div>
-                                        <a href="#" class="btn btn-primary mt-4">Pop it</a>
+                                        <form action="{{ route('workspace.create') }}" method="post">
+                                            <input type="text" hidden name="bubble_type" value="natural-language-processing">
+                                            <button class="btn btn-warning  mt-4">Create Bubble</button>
+                                        </form>
+                                        {{--<a href="#" class="btn btn-primary mt-4">Create Bubble</a>--}}
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +96,11 @@
                                             <span class="badge badge-pill badge-success">TensorFlow</span>
                                             <span class="badge badge-pill badge-success">Theano</span>
                                         </div>
-                                        <a href="#" class="btn btn-success mt-4">Pop it</a>
+                                        <form action="{{ route('workspace.create') }}" method="post">
+                                            <input type="text" hidden name="bubble_type" value="machine-learning">
+                                            <button class="btn btn-warning  mt-4">Create Bubble</button>
+                                        </form>
+                                        {{--<a href="#" class="btn btn-success mt-4">Create Bubble</a>--}}
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +119,11 @@
                                             <span class="badge badge-pill badge-warning">product</span>
                                             <span class="badge badge-pill badge-warning">launch</span>
                                         </div>
-                                        <a href="#" class="btn btn-warning mt-4">Learn more</a>
+                                        <form action="{{ route('workspace.create') }}" method="post">
+                                            <input type="text" hidden name="bubble_type" value="data-mining">
+                                            <button class="btn btn-warning  mt-4">Create Bubble</button>
+                                        </form>
+                                        {{--<a href="#" class="btn btn-warning mt-4">Create Bubble</a>--}}
                                     </div>
                                 </div>
                             </div>
