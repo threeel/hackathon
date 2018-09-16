@@ -77,12 +77,12 @@
                                     <label class="custom-control-label" for=" customCheckLogin">
                                         <span>Remember me</span>
                                     </label>
-                                    <input class="custom-control-input" type="checkbox" name="remember"
-                                           id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    {{--<input class="custom-control-input" type="checkbox" name="remember"--}}
+                                           {{--id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
 
-                                    <label class="custom-control-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
+                                    {{--<label class="custom-control-label" for="remember">--}}
+                                        {{--{{ __('Remember Me') }}--}}
+                                    {{--</label>--}}
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary my-4">{{ __('Login') }}</button>
