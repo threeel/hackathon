@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataBubble;
 use App\User;
 use http\Env\Response;
 use Illuminate\Http\Request;
@@ -21,8 +22,9 @@ class DataBubbleFilesController extends Controller {
 
             return \response([], 200);
         }
+        $bubble = $user->bubbles()->first();
 
-        return view('home');
+        return view('home')->with('dataBubble', $bubble);
 
     }
 }

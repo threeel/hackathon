@@ -31,8 +31,11 @@
                             </div>
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
-                                    <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
-                                    <a href="#" class="btn btn-sm btn-default float-right">Message</a>
+                                    @isset($dataBubble)
+                                        <a href="{{ $dataBubble->jupyter_url }}" target="_blank" class="btn btn-sm btn-info mr-4">Jupyter</a>
+                                        <a href="{{ $dataBubble->nteract_url }}" target="_blank"
+                                           class="btn btn-sm btn-default float-right">nteract</a>
+                                    @endisset
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-1">
@@ -50,9 +53,28 @@
                             </div>
                         </div>
                         <div class="text-center mt-5">
+                            <div class="container">
+                                <form method="post" action="{{ route('workspace.files') }}"
+                                      enctype="multipart/form-data" id="">
+                                    @csrf
+
+                                    <label class="btn btn-outline-success" for="upload">
+
+                                        <input id="upload" type="file" class="form-control-file" name="workspace_file"/>
+                                        Upload
+                                    </label>
+
+
+                                    <br>
+                                    <button class="btn btn-clipboard">Upload File</button>
+
+                                </form>
+                            </div>
+
                             @isset($dataBubble)
                                 <iframe src="{{ $dataBubble->jupyter_url }}" frameborder="0"></iframe>
                             @endisset
+
                         </div>
                         <div class="mt-5 py-5 border-top text-center">
                             <div class="row justify-content-center">

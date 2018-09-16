@@ -45,10 +45,16 @@ class BubbleMaker {
         // Execute the $type->entrypoint
         $nteract_command = $this->type->entrypoint;
 
-        $start_nteract = "docker exec ${container_id} ${nteract_command}";
-        $nteract_result = Terminal::command($start_nteract);
+        $start_nteract = 'docker exec ' . $container_id. ' /bin/bash -c "' . $nteract_command.'"';
+        try{
 
-        $response = $nteract_result->getBody()->getContents();
+            $nteract_result = Terminal::command($start_nteract)->execute();
+                    $response = $nteract_result->getBody()->getContents();
+        } catch (\Exception $exception) {
+//            echo $exception->getTrace();
+        }
+        // todo build a new image for jupyter with the token as an envirment variable
+        // so then set up the enviroment variable before booting the image
 
         return DataBubble::query()->create([
             'user_id'          => $this->user->id,

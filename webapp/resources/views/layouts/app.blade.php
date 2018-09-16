@@ -24,6 +24,7 @@
     <!-- Icons -->
     <link href="{{ asset('staticvendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
     <link href="{{ asset('staticvendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css" />
 {{--<!-- Argon CSS -->--}}
 {{--<link type="text/css" href="{{ asset('  /css/argon.css?v=1.0.1" rel="stylesheet">--}}
 <!-- Styles -->
@@ -46,6 +47,7 @@
 <script src="{{ asset('staticvendor/headroom/headroom.min.js')}}"></script>
 <!-- Argon JS -->
 <script src="{{ asset('js/argon.js?v=1.0.1')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.js"></script>
 </body>
 
 </html>
